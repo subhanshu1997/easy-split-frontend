@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Notification</title>
+</head>
+
+<body>
+    <div class="container" id="navbar-container">
+        <section class="text-center" id="section">
+            <nav class="navbar navbar-light navbar-expand-md d-sm-flex" id="navbar">
+                <div class="container-fluid">
+                    <section class="d-sm-flex align-items-sm-center" id="first-section"><button class="btn btn-primary button" [routerLink]="['/home']" type="button">Groups</button><button class="btn btn-primary button" [routerLink]="['/create-group']" type="button">Create Group</button>
+                        <section id="page-header-section">
+                            <h3 id="page-header">Expense History</h3>
+                        </section>
+                    </section>
+                    <section id="page-header-container"><button class="btn btn-primary button" (click)="createExpense()" type="button">Create Expense</button><button class="btn btn-primary button" (click)="logout()" type="button">Logout</button></section>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <div class="container" id="main-container">
+        <div class="table-responsive" id="table">
+            <table class="table">
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let object of expenseHistory">
+                            <div class="card" id="card">
+                                <div class="card-body">
+                                    <p class="card-text" id="card-paragraph">{{object}}</p>
+                                </div>
+                            </div>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="nodata" class="alert alert-danger" *ngIf="expenseHistory.length==0">
+            No History
+        </div>
+    </div>
+</body>
+
+</html>

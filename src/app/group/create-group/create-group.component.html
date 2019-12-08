@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>create-group</title>
+</head>
+
+<body id="body">
+    <div class="container" id="navbar-container">
+        <section class="text-center" id="section">
+            <nav class="navbar navbar-light navbar-expand-md d-sm-flex" id="navbar">
+                <div class="container-fluid">
+                    <section class="d-sm-flex align-items-sm-center" id="first-section"><button class="btn btn-primary button" [routerLink]="['/home']" type="button">Groups</button><button class="btn btn-primary button" [routerLink]="['/create-group']" type="button">Create Group</button>
+                        <section id="page-header-section">
+                            <h3 id="page-header">Create Group</h3>
+                        </section>
+                    </section>
+                    <section id="page-header-container"><button class="btn btn-primary button" (click)="logout()" type="button">Logout</button></section>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <div class="container" id="container-form">
+        <div class="row" id="row-form">
+            <div class="col" id="column-form" style="background-color: rgba(249,246,246,0.16);">
+                <form [formGroup]="groupForm" (ngSubmit)="onSubmit()">
+                    <div class="form-row" id="row-2">
+                        <div class="col text-center" id="column-title">
+                            <h3 id="title">Name of Group</h3>
+                        </div>
+                        <div class="col"><input formControlName="name" [ngClass]="{'is-invalid':groupForm.get('name').touched && groupForm.get('name').invalid}" class="form-control" type="text" id="title-input">
+                            <div class="invalid-feedback">
+                                    <div>
+                                        Name is required
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row" id="row-4">
+                        <div class="col text-center" id="column-date">
+                            <h3 id="date-of-creation">Date Of Creation</h3>
+                        </div>
+                        <div class="col"><input class="form-control" formControlName="date" id="date" type="date"></div>
+                    </div>
+                    <div class="form-row" id="row-5">
+                        <div class="col text-center" id="column-status">
+                            <h3 id="members">Members</h3>
+                        </div>
+                        <div class="col"><select (change)="changeMembers($event)" class="form-control"><option *ngFor="let item of userNameArray;let i=index" value={{i}} selected="">{{item}}</option></select></div>
+                        <div
+                            class="col text-center" id="column-dropdown2"><textarea formControlName="members" [ngClass]="{'is-invalid':groupForm.get('members').touched && groupForm.get('members').invalid}" class="form-control" id="all-members-input"></textarea>
+                            <div class="invalid-feedback">
+                                    <div>
+                                        Members are required
+                                    </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="form-row text-center" id="row-6">
+                <div class="col"><button class="btn btn-primary" id="submit" type="Submit" [disabled]="!groupForm.valid">Submit</button></div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

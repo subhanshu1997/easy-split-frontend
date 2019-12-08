@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>create-expense</title>
+</head>
+
+<body id="body">
+    <div class="container" id="navbar-container">
+        <section class="text-center" id="section">
+            <nav class="navbar navbar-light navbar-expand-md d-sm-flex" id="navbar">
+                <div class="container-fluid">
+                    <section class="d-sm-flex align-items-sm-center" id="first-section"><button class="btn btn-primary button" [routerLink]="['/home']" type="button">Groups</button><button class="btn btn-primary button" [routerLink]="['/create-group']" type="button">Create Group</button>
+                        <section id="page-header-section">
+                            <h3 id="page-header">View Expense</h3>
+                        </section>
+                    </section>
+                    <section id="page-header-container"><button class="btn btn-primary button" (click)="createExpense()" type="button">Create Expense</button><button class="btn btn-primary button" (click)="logout()" type="button">Logout</button></section>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <div class="container" id="container-form">
+        <div class="row" id="row-form">
+            <div class="col" id="column-form" style="background-color: rgba(249,246,246,0.16);">
+                <form [formGroup]="expenseForm">
+                    <div class="form-row" id="row-2">
+                        <div class="col text-center" id="column-title">
+                            <h3 id="title">Name of Expense</h3>
+                        </div>
+                        <div class="col"><input class="form-control" readonly formControlName="name" type="text" id="title-input"></div>
+                    </div>
+                    <div class="form-row" id="row-3">
+                        <div class="col text-center" id="column-title">
+                            <h3 id="createdBy">Created By:</h3>
+                        </div>
+                        <div class="col"><input class="form-control" readonly formControlName="createdBy" type="text" id="createdBy-input"></div>
+                    </div>
+                    <div class="form-row" id="row-4">
+                        <div class="col text-center" id="column-date">
+                            <h3 id="date-of-creation">Date Of Creation</h3>
+                        </div>
+                        <div class="col"><input class="form-control" readonly formControlName="date" id="date-of-creation" type="date"></div>
+                    </div>
+                    <div class="form-row" id="row-7">
+                        <div class="col text-center" id="column-date">
+                            <h3 id="amount">Amount</h3>
+                        </div>
+                        <div class="col"><input class="form-control" readonly formControlName="amount" type="number" id="amount-input"></div>
+                    </div>
+                    <div class="form-row" id="row-5">
+                        <div class="col text-center" id="column-status">
+                            <h3 id="allMembers">All Members</h3>
+                        </div>
+                        <div
+                            class="col text-center" id="column-dropdown2"><textarea readonly class="form-control" formControlName="members" id="all-members-input"></textarea></div>
+            </div>
+            <div class="form-row" id="row-5">
+                <div class="col text-center" id="column-status">
+                    <h3 id="membersPaid">Members (Paid)</h3>
+                </div>
+                <div class="col text-center"
+                    id="column-dropdown2"><textarea readonly formControlName="paidMembers" class="form-control" id="paid-members-input"></textarea></div>
+            </div>
+            <div class="form-row text-center" id="row-6">
+                <div class="col"><button class="btn btn-primary" (click)="editExpense()" id="submit" type="button">Edit</button></div>
+                <div class="col"><button class="btn btn-primary" (click)="viewExpenseHistory()" id="history" type="button">View History</button></div>
+                <div class="col"><button class="btn btn-primary" (click)="viewPendingAmount()" id="history" type="button">Pending</button></div>
+                <div class="col"><button class="btn btn-primary" (click)="deleteExpense()" id="submit" type="button">Delete</button></div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

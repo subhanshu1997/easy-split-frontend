@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>groups</title>
+</head>
+
+<body id="body">
+    <div class="container" id="navbar-container">
+        <section class="text-center" id="section">
+            <nav class="navbar navbar-light navbar-expand-md d-sm-flex" id="navbar">
+                <div class="container-fluid">
+                    <section class="d-sm-flex align-items-sm-center" id="first-section"><button class="btn btn-primary button" (click)="ngOnInit()" type="button">Groups</button><button class="btn btn-primary button" [routerLink]="['/create-group']" type="button">Create Group</button>
+                        <section id="page-header-section">
+                            <h2 id="page-header">Groups</h2>
+                        </section>
+                    </section>
+                    <section id="page-header-container"><button class="btn btn-primary button" (click)="logout()" type="button">Logout</button></section>
+                </div>
+            </nav>
+        </section>
+    </div>
+    <div *ngIf="!groups.length==0" class="container d-flex flex-row" id="main-container">
+        <div (click)="viewExpenses(item.name)" *ngFor="let item of groups" class="card">
+            <div class="card-body">
+                <h3 class="text-center" id="card-heading">{{item.name}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+    <div *ngIf="groups.length==0" class="alert alert-danger">
+        You are not a part of any group.
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+body {
+    background-image: url("../../../assets/img/102165051-money-transaction.1910x1000.jpg");
+    min-height: 100vh;
+  }
+  
+  #card{
+    background-color: rgba(251, 251, 251, 0.63);
+    margin: 1%;
+    color: rgb(110, 73, 4);
+    font-size: 20px;
+    /*box-shadow: 5px 5px 5px 5px rgba(251, 251, 251, 0.863);*/
+  }
+
+  #card:hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 5px 5px rgba(198, 221, 223, 0.582);
+  }
+  
+  #heading {
+    margin-bottom: 0px;
+  }
+
+  #navbar-container {
+    width: 100vw;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+#navbar {
+    /*display: inline-block;*/
+    float: none;
+    text-align: center;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: rgba(251,251,251,0);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+  }
+
+ #section {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 1px solid grey;
+    background-color: rgba(251,251,251,0.46);
+    width: 100%;
+  }
+
+#page-header-section {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgba(255,255,255,0.52);
+    width: 15.8vw;
+    margin: 0px;
+    margin-left: 2.5vw;
+  }
+
+  #page-header-container{
+      margin-right: 2vw;
+  }
+
+  #page-header {
+    float: none;
+    align-self: center;
+    color: rgb(110, 73, 4);
+  }
+
+.btn.btn-primary.button {
+    border: solid 1px rgb(110,73,4);
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 13vw;
+    background-color: rgba(247, 245, 241, 0.493);
+    font-size: 21px;
+    color: rgb(110, 73, 4);
+    font-weight: 500;
+    margin-left: 20px;
+  }
+  .btn.btn-primary.button:hover {
+  background-color: rgba(129, 117, 93, 0.89);
+  }

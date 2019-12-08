@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+</head>
+
+<body id="body">
+    <div id="block" class="login-dark">
+        <form id="form" [formGroup]="loginForm" (ngSubmit)="login()" method="post">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <div class="form-group"><input formControlName="username" [ngClass]="{'is-invalid':loginForm.get('username').touched && loginForm.get('username').invalid}" type="username" class="form-control" id="username" name="username" placeholder="Username" />
+            <div class="invalid-feedback">
+                <div>
+                    Username is required
+                </div>
+            </div></div>
+            <div class="form-group"><input formControlName="password" [ngClass]="{'is-invalid':loginForm.get('password').touched && loginForm.get('password').invalid}" class="form-control" type="password" name="password" placeholder="Password">
+            <div class="invalid-feedback">
+                <div>
+                    Password is required
+                </div>
+            </div></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" id="login" type="submit" [disabled]="!loginForm.valid" style="color: #ffffff;">Log In</button></div><a type="button" id="signup" [routerLink]="['/sign-up']">SIGNUP</a><a class="forgot" href="#">Forgot your email or password?</a>
+            <div *ngIf="status==true" style="text-align: center">
+                <p class="text-danger">{{errormessage}}</p>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

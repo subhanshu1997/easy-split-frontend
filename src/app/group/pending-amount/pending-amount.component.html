@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Pending Expense</title>
+</head>
+
+<body>
+        <div class="container" id="navbar-container">
+                <section class="text-center" id="section">
+                    <nav class="navbar navbar-light navbar-expand-md d-sm-flex" id="navbar">
+                        <div class="container-fluid">
+                            <section class="d-sm-flex align-items-sm-center" id="first-section"><button class="btn btn-primary button" [routerLink]="['/home']" type="button">Groups</button><button class="btn btn-primary button" [routerLink]="['/create-group']" type="button">Create Group</button>
+                                <section id="page-header-section">
+                                    <h3 id="page-header">Pending Amount</h3>
+                                </section>
+                            </section>
+                            <section id="page-header-container"><button class="btn btn-primary button" (click)="createExpense()" type="button">Create Expense</button><button class="btn btn-primary button" (click)="logout()" type="button">Logout</button></section>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+    <div class="container">
+        <div class="table-responsive text-center table-secondary" id="table" *ngIf="members.length!=0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name Of Member</th>
+                        <th>Amount to be paid to {{createdBy}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of membersName">
+                        <td>{{item}}</td>
+                        <td>₹{{amount}}</td>
+                    </tr>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container alert alert-danger" *ngIf="members.length==0">
+            All members of this expense have paid.
+        </div>
+    </div>
+</body>
+
+</html>

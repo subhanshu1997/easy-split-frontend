@@ -1,0 +1,112 @@
+#body {
+    background-image: url("../../../assets/img/dims.jpg");
+    background-size: cover;
+    min-height: 100vh;
+  }
+  
+  #navbar-container {
+    width: 100vw;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  
+  #section {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 1px solid grey;
+    background-color: rgba(251,251,251,0.46);
+    width: 100%;
+  }
+
+  #navbar {
+    /*display: inline-block;*/
+    float: none;
+    text-align: center;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: rgba(251,251,251,0);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+  }
+
+  #card {
+    border-radius: 20px;
+    margin: 2vh;
+    width: 100%;
+    height: 7vh;
+  }
+
+  .card-body:hover{
+    cursor: pointer;
+  }
+  
+  .card-body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    padding-top: 1vh;
+  }
+  
+  #heading {
+    margin-bottom: 0px;
+  }
+  
+  .card-title.heading {
+    margin-bottom: 0px;
+    color: rgb(255,255,255);
+  }
+  
+  .card {
+    border-radius: 19px;
+    width: 100%;
+    height: 10vh;
+    margin-top: 5px;
+    background-color: rgba(200,185,198,0.81);
+  }
+  
+  #page-header {
+    float: none;
+    align-self: center;
+    color: rgb(108,56,99);
+  }
+  
+  .text-left.card-title.heading.expense-info {
+    margin-left: 2vw;
+  }
+  
+  .label {
+    margin-left: 0.5vw;
+    font-size: 20px;
+  }
+  
+  #page-header-section {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: rgba(255,255,255,0.52);
+    width: 15vw;
+    margin: 0px;
+    margin-left: 2.5vw;
+  }
+
+  #page-header-container{
+      margin-right: 2vw;
+  }
+  
+  .btn.btn-primary.button {
+    border: solid 1px rgb(121,82,135);
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 13vw;
+    background-color: rgba(250,250,251,0.22);
+    font-size: 21px;
+    color: rgb(108,56,99);
+    font-weight: 500;
+    margin-left: 20px;
+  }
+
+  .btn.btn-primary.button:hover {
+    background-color: rgb(157, 119, 168);
+    }
+  
+  
