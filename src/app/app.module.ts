@@ -25,9 +25,9 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms'
     ToastrModule.forRoot(),
     RouterModule.forRoot([
       {path:'',redirectTo:'login',pathMatch:'full'},
-      {path:'login',component:LoginComponent,pathMatch:'full'}
-      // {path:'*',component:LoginComponent},
-      // {path:'**',component:LoginComponent}
+      {path:'login',component:LoginComponent,pathMatch:'full'},
+      {path:'*',component:LoginComponent},
+      {path:'**',component:LoginComponent}
     ])
   ],
   providers: [],

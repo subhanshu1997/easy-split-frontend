@@ -7,7 +7,7 @@ import {ToastrService} from 'ngx-toastr'
 })
 export class AppService {
 private url='http://localhost:3000/api/v1/easy-split'
-//private url='http://api.my-app-dev.tk/api/v1/issue-tracking-tool'
+//private url='http://api.my-app-dev.tk/api/v1/easy-split'
 auth='';
 name=''
 firstName:String

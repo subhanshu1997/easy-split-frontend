@@ -22,7 +22,7 @@
             </nav>
         </section>
     </div>
-    <div *ngIf="!groups.length==0" class="container d-flex flex-row" id="main-container">
+    <div *ngIf="groups.length!=0" class="container d-flex flex-row" id="main-container">
         <div (click)="viewExpenses(item.name)" *ngFor="let item of groups" class="card">
             <div class="card-body">
                 <h3 class="text-center" id="card-heading">{{item.name}}</h3>
